@@ -10,6 +10,7 @@ import {
 import { useState } from "react";
 
 const SkillCard = ({
+  authorClerkId,
   authorEmail,
   category,
   createdAt,
@@ -19,6 +20,14 @@ const SkillCard = ({
   title,
 }: SkillRecord) => {
   const [copied, setCopied] = useState(false);
+
+  const displayAuthor = authorEmail ?? authorClerkId ?? "Unknown author";
+
+  const displayDate = (() => {
+    if (!createdAt) return "Unknown date";
+    const d = new Date(createdAt);
+    return isNaN(d.getTime()) ? "Unknown date" : d.toLocaleDateString();
+  })();
 
   const handleCopy = () => {
     navigator.clipboard.writeText(installCommand);
@@ -50,8 +59,8 @@ const SkillCard = ({
           <div className="author">
             <img src="/logo512.png" alt="author avatar" className="avatar" />
             <div className="author-copy">
-              <p>Adrian</p>
-              <p>{new Date(createdAt as string).toLocaleDateString()}</p>
+              <p>{displayAuthor}</p>
+              <p>{displayDate}</p>
             </div>
           </div>
           <p className="category">{category}</p>
@@ -65,11 +74,12 @@ const SkillCard = ({
         </div>
 
         <div className="command">
-          <div className="comand-copy">
+          <div className="command-copy">
             <span>{">_"}</span>
             <p>{installCommand}</p>
           </div>
           <button
+            type="button"
             className={`copy${copied ? " copied" : ""}`}
             onClick={handleCopy}
             aria-label="Copy install command"
