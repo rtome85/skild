@@ -106,7 +106,7 @@ const SkillCard = ({
               <span>Open</span>
               <ArrowUpRight size={14} />
             </Link>
-            <button className="sabe" aria-label="Saved state" disabled>
+            <button className="save" aria-label="Saved state" disabled>
               <Bookmark size={16} />
             </button>
           </div>
