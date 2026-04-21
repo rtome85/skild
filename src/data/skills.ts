@@ -1,0 +1,67 @@
+export const skills: SkillRecord[] = [
+  {
+    id: "1",
+    title: "React Hooks Mastery",
+    slug: "react-hooks-mastery",
+    description:
+      "Deep dive into React hooks including useState, useEffect, useCallback, and custom hooks patterns.",
+    category: "Frontend",
+    tags: ["react", "hooks", "javascript", "frontend"],
+    installCommand: "npx skild add react-hooks-mastery",
+    createdAt: "2024-01-15T10:00:00Z",
+    authorClerkId: "user_abc123",
+    authorEmail: "alice@example.com",
+  },
+  {
+    id: "2",
+    title: "TypeScript Generics",
+    slug: "typescript-generics",
+    description:
+      "Master TypeScript generics, conditional types, mapped types, and advanced type inference.",
+    category: "Language",
+    tags: ["typescript", "generics", "types", "advanced"],
+    installCommand: "npx skild add typescript-generics",
+    createdAt: "2024-02-03T14:30:00Z",
+    authorClerkId: "user_def456",
+    authorEmail: "bob@example.com",
+  },
+  {
+    id: "3",
+    title: "Node.js REST API",
+    slug: "nodejs-rest-api",
+    description:
+      "Build production-ready REST APIs with Node.js, Express, authentication, and error handling.",
+    category: "Backend",
+    tags: ["nodejs", "express", "api", "rest", "backend"],
+    installCommand: "npx skild add nodejs-rest-api",
+    createdAt: "2024-03-10T09:15:00Z",
+    authorClerkId: null,
+    authorEmail: null,
+  },
+  {
+    id: "4",
+    title: "CSS Grid Layouts",
+    slug: "css-grid-layouts",
+    description:
+      "Create complex, responsive layouts using CSS Grid with practical real-world examples.",
+    category: "Styling",
+    tags: ["css", "grid", "layout", "responsive", "frontend"],
+    installCommand: "npx skild add css-grid-layouts",
+    createdAt: "2024-04-01T11:45:00Z",
+    authorClerkId: "user_ghi789",
+    authorEmail: "carol@example.com",
+  },
+  {
+    id: "5",
+    title: "PostgreSQL Indexing",
+    slug: "postgresql-indexing",
+    description:
+      "Optimize database queries with proper indexing strategies, query plans, and performance tuning.",
+    category: "Database",
+    tags: ["postgresql", "database", "indexing", "performance", "sql"],
+    installCommand: "npx skild add postgresql-indexing",
+    createdAt: "2024-04-18T16:00:00Z",
+    authorClerkId: "user_jkl012",
+    authorEmail: "dave@example.com",
+  },
+];
