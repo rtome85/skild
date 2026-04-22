@@ -299,7 +299,7 @@
   }
 
   #new-skill {
-    @apply mx-auto flex w-full max-w-4xl flex-col gap-8 px-4 pb-20 pt-8 md:px-12;
+    @apply mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 pb-20 pt-8 md:px-12;
 
     &.loading {
       p {
@@ -364,7 +364,7 @@
     }
 
     .block {
-      @apply flex flex-col gap-12;
+      @apply flex flex-col gap-12 text-black dark:text-white;
     }
 
     .divider {
