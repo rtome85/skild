@@ -1,0 +1,7 @@
+# This is a file for you to write an un-named mutation. 
+# Only one un-named mutation is allowed per file.
+mutation {
+  skill_insert(
+    data: {id: "11111111222233334444555555555555", authorClerkId: "user_3CfiWontmnFCc6hXdhNQA8fe2vZ", createdAt: "2026-04-22T08:04:01.493Z", description: "Deep dive into React hooks including useState, useEffect, useCallback, and custom hooks patterns.", installCommand: "npx skild add react-hooks-mastery", promptConfig: "", tags: ["react", "hooks", "javascript", "frontend"], title: "React Hooks Mastery", usageExample: ""}
+  )
+}
