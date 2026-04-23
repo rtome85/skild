@@ -202,32 +202,32 @@ function NewSkill() {
 				<div className="divider" />
 
 				<div className="block mt-8">
-					<form.Field
-						name="usageExample"
-						children={(field) => {
-							const isInvalid =
-								field.state.meta.isTouched && !field.state.meta.isValid;
+					<FieldGroup>
+						<form.Field
+							name="usageExample"
+							children={(field) => {
+								const isInvalid =
+									field.state.meta.isTouched && !field.state.meta.isValid;
 
-							return (
-								<Field data-invalid={isInvalid}>
-									<FieldLabel htmlFor={field.name}>Usage Example</FieldLabel>
-									<Textarea
-										id={field.name}
-										name={field.name}
-										value={field.state.value}
-										onChange={(e) => field.handleChange(e.target.value)}
-										aria-invalid={isInvalid}
-										placeholder="Show how to use this skill in a real scenario"
-										rows={6}
-										className="min-h-32 resize-none text-black"
-									/>
-									{isInvalid && (
-										<FieldError errors={field.state.meta.errors} />
-									)}
-								</Field>
-							);
-						}}
-					/>
+								return (
+									<Field data-invalid={isInvalid}>
+										<FieldLabel htmlFor={field.name}>Usage Example</FieldLabel>
+										<Textarea
+											id={field.name}
+											name={field.name}
+											value={field.state.value}
+											onChange={(e) => field.handleChange(e.target.value)}
+											aria-invalid={isInvalid}
+											placeholder="Show how to use this skill in a real scenario"
+											rows={6}
+											className="min-h-32 resize-none text-black"
+										/>
+										{isInvalid && (
+											<FieldError errors={field.state.meta.errors} />
+										)}
+									</Field>
+								);
+							}}
 						/>
 					</FieldGroup>
 				</div>
