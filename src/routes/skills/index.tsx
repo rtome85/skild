@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import Search from "#/components/Search";
 import SkillCard from "#/components/SkillCard";
 import { skillSearchSchema } from "#/lib/schema";
 import { searchSkillsFn } from "#/server";
@@ -22,15 +23,17 @@ function RouteComponent() {
 				<header>
 					<h1>
 						Explore <span className="text-gradient">Skills</span>
-						<p>
-							Browse, filter and inspect resusable AI capabilities from a single
-							registry.
-						</p>
 					</h1>
+					<p>
+						Browse, filter and inspect reusable AI capabilities from a single
+						registry.
+					</p>
 				</header>
-				<Link to="/skills/new" className="btn-secondary">
+
+				<Search />
+				{/* <Link to="/skills/new" className="btn-secondary">
 					Submit Skill
-				</Link>
+				</Link> */}
 			</section>
 
 			<section className="results">

@@ -308,7 +308,11 @@ export default function GetSkillByIdComponent() {
 
   // If the Query is successful, you can access the data returned using the `UseQueryResult.data` field.
   if (query.isSuccess) {
-    console.log(query.data.skill);
+    if (query.data.skill) {
+      console.log(query.data.skill);
+    } else {
+      console.log('Skill not found');
+    }
   }
   return <div>Query execution {query.isSuccess ? 'successful' : 'failed'}!</div>;
 }
