@@ -18,3 +18,11 @@ export const submitSkillSchema = z.object({
 	promptConfig: z.string().trim().min(1),
 	usageExample: z.string().trim().min(1),
 });
+
+export const skillSearchSchema = z.object({
+	page: z.coerce.number().int().positive().catch(1),
+	q: z
+		.string()
+		.catch("")
+		.transform((value) => value.trim()),
+});
