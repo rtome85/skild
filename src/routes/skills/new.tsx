@@ -222,6 +222,9 @@ function NewSkill() {
 											rows={6}
 											className="min-h-32 resize-none text-black"
 										/>
+										{isInvalid && (
+											<FieldError errors={field.state.meta.errors} />
+										)}
 									</Field>
 								);
 							}}
